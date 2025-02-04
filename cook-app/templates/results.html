@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рецепты</title>
+</head>
+<body>
+    {% if recipes %}
+    <h2>Возможные рецепты:</h2>
+    {% for recipe in recipes %}
+        <h3>{{ recipe[1] }}</h3>
+        <img src="{{ recipe[3] }}" alt="Фото {{ recipe[1] }}" style="width:200px;">
+        <p>{{ recipe[2] }}</p>
+    {% endfor %}
+{% else %}
+    <p>Нет рецептов для выбранных продуктов.</p>
+{% endif %}
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

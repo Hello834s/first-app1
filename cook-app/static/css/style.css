@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+/* Контейнер для видео */
+video {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+}
+
+/* Контейнер для блока с поиском */
+.search-container {
+    position: absolute;
+    bottom: -15px; /* Сдвигаем на 15px ниже видео */
+    left: 10%; /* Сдвигаем от левого края */
+    background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон */
+    padding: 15px;
+    border: 2px solid #000; /* Черная рамка */
+    width: 80%; /* Ширина блока */
+    height: 100px; /* Высота блока */
+    box-sizing: border-box;
+    z-index: 10; /* Чтобы блок был поверх видео */
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Центрируем по высоте */
+    justify-content: space-between; /* Разделяем элементы по бокам */
+    transform: translateY(10px); /* Сдвигаем блок на 10px вниз для лучшего выравнивания */
+}
+
+/* Строка поиска */
+form input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Для поля ввода, чтобы оно не выходило за рамку */
+form input:focus {
+    border-bottom: 2px solid #000;
+}
+
+/* Убираем кнопку */
+form button {
+    display: none;
+}
+
+/* Контейнер для текста */
+.text-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* полупрозрачная белая рамка */
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
